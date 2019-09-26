@@ -1,0 +1,83 @@
+{
+  "name": "mikko-laakso",
+  "private": true,
+  "description": "mikko-laakso-website",
+  "version": "0.1.0",
+  "author": "Tri Hoang <hoangtri241097@gmail.com>",
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.1.0",
+    "gatsby": "^2.15.22",
+    "gatsby-image": "^2.2.21",
+    "gatsby-plugin-manifest": "^2.2.18",
+    "gatsby-plugin-offline": "^3.0.8",
+    "gatsby-plugin-react-helmet": "^3.1.8",
+    "gatsby-plugin-sharp": "^2.2.25",
+    "gatsby-plugin-typescript": "^2.1.9",
+    "gatsby-source-filesystem": "^2.1.26",
+    "gatsby-transformer-sharp": "^2.2.17",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^9.1.4",
+    "@types/jest": "^24.0.18",
+    "@types/react": "^16.9.1",
+    "@types/react-dom": "^16.9.1",
+    "@types/react-helmet": "^5.0.10",
+    "cross-env": "^6.0.0",
+    "gatsby-plugin-tslint": "^0.0.2",
+    "husky": "^3.0.5",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.3.0",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.1.0",
+    "tslint": "^5.20.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-loader": "^3.5.4",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^4.1.0",
+    "typescript": "^3.6.3"
+  },
+  "keywords": [
+    "gatsby",
+    "react",
+    "typescript",
+    "frontend",
+    "javascript"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "tslint-prettier": "tslint-config-prettier-check ./tslint.json",
+    "lint": "tslint --project tsconfig.json",
+    "lint:fix": "tslint --fix --project tsconfig.json",
+    "types-check": "tsc --noEmit",
+    "format": "prettier \"**/*.+(js|jsx|json|ts|tsx|css|scss|md|mdx|graphql)\" --write",
+    "start": "yarn run develop",
+    "serve": "gatsby serve",
+    "test": "cross-env NODE_ENV=test jest",
+    "test:watch": "cross-env NODE_ENV=test jest --watchAll"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged & yarn run types-check"
+    }
+  },
+  "lint-staged": {
+    "src/*.{ts, tsx}": "yarn run lint",
+    "**/*.+(js|jsx|json|ts|tsx|css|scss|md|mdx|graphql)": [
+      "yarn run format",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}
