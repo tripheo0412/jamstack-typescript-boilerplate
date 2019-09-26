@@ -1,7 +1,16 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
-  <a href="https://www.integrify.io">
-    <img alt="Integrify" src="https://cdn-images-1.medium.com/max/1200/1*lom-swsdYU460G9DdLIdXg.jpeg" width="100" />
+  <a href="https://reactjs.org/">
+    <img alt="React" src="https://miro.medium.com/max/500/1*cPh7ujRIfcHAy4kW2ADGOw.png" width="100" />
+  </a>
+  <a href="https://www.gatsbyjs.org/">
+    <img alt="Gatsby" src="https://codingthesmartway.com/wp-content/uploads/2019/02/gatsby-logo.png" width="100" />
+  </a>
+  <a href="https://www.circleci.com/">
+    <img alt="CircleCI" src="https://circleci.com/circleci-logo-stacked-fb.png" width="100" />
+  </a>
+  <a href="https://www.netlify.com/">
+    <img alt="Netlify" src="https://www.netlify.com/img/press/logos/logomark.png" width="100" />
   </a>
 </p>
 <h1 align="center">
@@ -16,7 +25,7 @@ Kick off your project with this default boilerplate. This starter ships with the
 
     ```shell
     # clone this repo via github link
-    git clone https://github.com/Integrify-Finland/Mikko-Laakso.git
+    git clone https://github.com/tripheo0412/React-Gatsby-Typescript-CircleCI-Netlify-Boilerplate.git
     ```
 
 2.  **Install all packages**
@@ -24,14 +33,14 @@ Kick off your project with this default boilerplate. This starter ships with the
     Using either yarn/npm install
 
     ```shell
-    cd Mikko-Laakso/
+    cd React-Gatsby-Typescript-CircleCI-Netlify-Boilerplate/
     yarn
     ```
 
     or
 
     ```shell
-    cd Mikko-Laakso/
+    cd React-Gatsby-Typescript-CircleCI-Netlify-Boilerplate/
     npm install
     ```
 
@@ -68,7 +77,7 @@ Kick off your project with this default boilerplate. This starter ships with the
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-    Open the `Mikko-Laakso` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+    Open the `React-Gatsby-Typescript-CircleCI-Netlify-Boilerplate` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
 ## 🧐 What's inside?
 

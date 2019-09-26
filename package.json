@@ -1,9 +1,9 @@
 {
-  "name": "mikko-laakso",
+  "name": "React-Gatsby-Typescript-CircleCI-Netlify-Boilerplate",
   "private": true,
-  "description": "mikko-laakso-website",
+  "description": "React-Gatsby-Typescript-CircleCI-Netlify-Boilerplate",
   "version": "0.1.0",
-  "author": "Tri Hoang <hoangtri241097@gmail.com>",
+  "author": "Tri Hoang <tripheo0412@gmail.com>",
   "dependencies": {
     "@testing-library/jest-dom": "^4.1.0",
     "gatsby": "^2.15.22",
