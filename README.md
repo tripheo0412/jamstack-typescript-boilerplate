@@ -50,7 +50,21 @@ Kick off your project with this default boilerplate. This starter ships with the
     npm install
     ```
 
-3.  **Setting up CI/CD**
+3.  **Add Contentful**
+
+    Sign up account on Contentful.
+
+    Create new space.
+
+    Go to Space's setting -> Api keys -> Generate new Personal Access Tokens -> Add token to .env file.
+
+    Go to Space's setting -> Add Space's ID to .env file.
+
+    Go to gatsby-config.js remove comment on contentful plugin.
+
+    Voila! You are ready to go!
+
+4.  **Setting up CI/CD**
 
     Registered your account on CircleCI and Netlify.
 
@@ -67,7 +81,7 @@ Kick off your project with this default boilerplate. This starter ships with the
 
     Note that for master branch, CircleCI will build the App and release to Netlify with tag --prod for Production deployment.
 
-4.  **Open the source code and start editing!**
+5.  **Open the source code and start editing!**
 
     ```shell
     yarn start
