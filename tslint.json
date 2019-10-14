@@ -11,6 +11,7 @@
 		"interface-name": false,
 		"object-literal-sort-keys": false,
 		"no-console": false,
+		"no-var-requires": false,
 		"jsx-no-lambda": false,
 		"prefer-const": false,
 		"no-shadowed-variable": false,

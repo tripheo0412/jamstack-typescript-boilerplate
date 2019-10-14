@@ -1,7 +1,8 @@
+require('dotenv').config()
 module.exports = {
 	siteMetadata: {
-		title: `Gatsby Default Starter`,
-		description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+		title: `React-Gatsby-Typescript-CircleCI-Netlify-Boilerplate`,
+		description: `React-Gatsby-Typescript-CircleCI-Netlify-Boilerplate`,
 		author: `@gatsbyjs`,
 	},
 	plugins: [
@@ -14,6 +15,15 @@ module.exports = {
 				exclude: /(node_modules|cache|public)/,
 			},
 		},
+		/***** REMOVE COMMENT TO ENABLE CONTENTFUL CMS
+		{
+			resolve: `gatsby-source-contentful`,
+			options: {
+				spaceId: process.env.CONTENTFUL_SPACE_ID,
+				accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+			},
+		},
+		******/
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
@@ -22,6 +32,14 @@ module.exports = {
 			},
 		},
 		`gatsby-transformer-sharp`,
+		{
+			resolve: `gatsby-plugin-sass`,
+			options: {
+				data:
+					'@import "_variables.scss";@import "_mixins.scss";@import "_layout.scss";',
+				includePaths: ['src/assets/styles'],
+			},
+		},
 		`gatsby-plugin-sharp`,
 		{
 			resolve: `gatsby-plugin-manifest`,

@@ -1,0 +1,8 @@
+{
+	"editor.formatOnSave": true,
+
+	"workbench.colorCustomizations": {
+		"tab.unfocusedActiveBorder": "#fff0"
+	},
+	"git.ignoreLimitWarning": true
+}
