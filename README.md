@@ -113,7 +113,7 @@ Kick off your project with this default boilerplate. This starter ships with the
 
 ## 🧐 What's inside?
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+A quick look at the top-level files and directories you'll see in this boilerplate.
 
     .
     ├── .circleci/config.yml
