@@ -26,7 +26,7 @@ module.exports = {
 	},
 	// Where Jest detectes test files
 	testMatch: [
-		'<rootDir>/src/**/tests/**/*.{ts,tsx,js,jsx}',
+		'<rootDir>/src/**/__tests__/**/*.{ts,tsx,js,jsx}',
 		'<rootDir>/src/**/?(*.)(spec|test).{ts,tsx,js,jsx}',
 	],
 	testPathIgnorePatterns: [`node_modules`, `.cache`, `public`],
