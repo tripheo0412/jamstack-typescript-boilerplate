@@ -7,7 +7,7 @@
     <img alt="Gatsby" src="https://codingthesmartway.com/wp-content/uploads/2019/02/gatsby-logo.png" width="100" />
   </a>
   <a href="https://www.contentful.com/">
-    <img alt="Contenful" src="https://d21buns5ku92am.cloudfront.net/41748/images/265846-Mark_Circular_darkBg_800x800-dd92d6-large-1511779631.png" width="100" />
+    <img alt="Contenful" src="https://avatars1.githubusercontent.com/u/472182?s=280&v=4" width="100" />
   </a>
   <a href="https://storybook.js.org/">
     <img alt="Storybook" src="https://pbs.twimg.com/profile_images/1100804485616566273/sOct-Txm_400x400.png" width="100" />
