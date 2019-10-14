@@ -20,7 +20,7 @@
   </a>
 </p>
 <h1 align="center">
-  React-Typescript-Gatsby-CircleCI-Netlify Boilerplate
+  React-Typescript-Gatsby-Contentful-Storybook-CircleCI-Netlify Boilerplate
 </h1>
 
 Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files the blazing fast app generator for React. Integrating with Typescript for type checking as well as Jest for unit testing. Provide smooth development experience and CI/CD pipeline with CircleCI and Netlify built in.
