@@ -58,7 +58,19 @@ Kick off your project with this default boilerplate. This starter ships with the
 
     Go to Space's setting -> Api keys -> Generate new Personal Access Tokens -> Add token to .env file.
 
+
+    ```shell
+    CONTENTFUL_SPACE_ID <your generated Contentful personal access token>
+    CONTENTFUL_ACCESS_TOKEN <your Space ID>
+    ```
+
     Go to Space's setting -> Add Space's ID to .env file.
+
+
+    ```shell
+    CONTENTFUL_SPACE_ID <your generated Contentful personal access token>
+    CONTENTFUL_ACCESS_TOKEN <your Space ID>
+    ```
 
     Go to gatsby-config.js remove comment on contentful plugin.
 
