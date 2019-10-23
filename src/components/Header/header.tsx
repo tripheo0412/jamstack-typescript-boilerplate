@@ -1,11 +1,12 @@
-import {Link} from 'gatsby'
+import { Link } from 'gatsby'
 import React from 'react'
 
-interface Props {
+interface PropsType {
+	/** siteTitle prop type */
 	siteTitle: string
 }
 
-const Header = ({siteTitle}: Props) => (
+const Header = ({ siteTitle }: PropsType) => (
 	<header
 		style={{
 			background: `rebeccapurple`,
@@ -19,7 +20,7 @@ const Header = ({siteTitle}: Props) => (
 				padding: `1.45rem 1.0875rem`,
 			}}
 		>
-			<h1 style={{margin: 0}}>
+			<h1 style={{ margin: 0 }}>
 				<Link
 					to="/"
 					style={{

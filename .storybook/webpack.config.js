@@ -1,6 +1,6 @@
 const path = require('path')
 
-module.exports = ({config}) => {
+module.exports = ({ config }) => {
 	// Transpile Gatsby module because Gatsby includes un-transpiled ES6 code.
 	config.module.rules[0].exclude = [/node_modules\/(?!(gatsby)\/)/]
 
@@ -46,10 +46,15 @@ module.exports = ({config}) => {
 
 	config.module.rules.push({
 		test: /\.(ts|tsx)$/,
-		loader: require.resolve('babel-loader'),
-		options: {
-			presets: [['react-app', {flow: false, typescript: true}]],
-		},
+		use: [
+			{
+				loader: require.resolve('babel-loader'),
+				options: {
+					presets: [['react-app', { flow: false, typescript: true }]],
+				},
+			},
+			require.resolve('react-docgen-typescript-loader'),
+		],
 	})
 	config.resolve.extensions.push('.ts', '.tsx')
 	return config

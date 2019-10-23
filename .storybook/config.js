@@ -1,6 +1,8 @@
-import {configure} from '@storybook/react'
-import {action} from '@storybook/addon-actions'
+import { configure, addDecorator } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
 
+import { withInfo } from '@storybook/addon-info'
+addDecorator(withInfo)
 // automatically import all files ending in *.stories.js
 const req = require.context('../src/components', true, /.stories.tsx$/)
 
