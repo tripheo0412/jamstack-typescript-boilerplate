@@ -7,7 +7,7 @@ describe('<Header/>', () => {
 		// Arrange
 		const { getByText } = render(<Header siteTitle={'TESTING'} />)
 
-		//Act
+		// Act
 
 		// Assert
 		expect(getByText('TESTING')).toBeInTheDocument()
