@@ -1,5 +1,5 @@
 import React from 'react'
-import { storiesOf, addParameters } from '@storybook/react'
+import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { withKnobs, select } from '@storybook/addon-knobs'
 import { jsxDecorator } from 'storybook-addon-jsx'
