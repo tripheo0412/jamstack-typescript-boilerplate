@@ -69,34 +69,20 @@ jobs:
     executor: node-executor
     working_directory: ~/repo
     steps:
-      - gatsby-build-storybook-build
       - run:
           name: Check lint error
           command: yarn lint
       - run:
           name: Testing
           command: yarn test -u
-      # - run:
-      #     name: Netlify Deploy Gatsby
-      #     command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --dir=public
-      # - run:
-      #     name: Netlify Deploy Storybook
-      #     command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID_STORYBOOK --auth $NETLIFY_ACCESS_TOKEN --dir=storybook-static
 
   release:
     executor: node-executor
     working_directory: ~/repo
     steps:
-      - gatsby-build-storybook-build
       - run:
           name: Check lint error
           command: yarn lint
       - run:
           name: Testing
           command: yarn test -u
-      # - run:
-      #     name: Netlify Deploy Gatsby
-      #     command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=public
-      # - run:
-      #     name: Netlify Deploy Storybook
-      #     command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID_STORYBOOK --auth $NETLIFY_ACCESS_TOKEN --prod --dir=storybook-static
