@@ -69,6 +69,7 @@ jobs:
     executor: node-executor
     working_directory: ~/repo
     steps:
+      - gatsby-build-storybook-build
       - run:
           name: Check lint error
           command: yarn lint
@@ -80,6 +81,7 @@ jobs:
     executor: node-executor
     working_directory: ~/repo
     steps:
+      - gatsby-build-storybook-build
       - run:
           name: Check lint error
           command: yarn lint
