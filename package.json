@@ -79,18 +79,20 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
-    "tslint-prettier": "tslint-config-prettier-check ./tslint.json",
-    "lint": "tslint --project tsconfig.json",
-    "lint:fix": "tslint --fix --project tsconfig.json",
-    "types-check": "tsc --noEmit",
-    "format": "prettier \"**/*.+(js|jsx|json|ts|tsx|css|scss|md|mdx|graphql)\" --write",
-    "start": "yarn run develop",
-    "serve": "gatsby serve",
-    "test": "cross-env NODE_ENV=test jest -u",
-    "test:watch": "cross-env NODE_ENV=test jest --watchAll",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+        "develop": "gatsby develop",
+        "tslint-prettier": "tslint-config-prettier-check ./tslint.json",
+        "lint": "tslint --project tsconfig.json",
+        "lint:fix": "tslint --fix --project tsconfig.json",
+        "clear-cache": "rm -r .cache",
+        "types-check": "tsc --noEmit",
+        "format": "prettier \"**/*.+(js|jsx|json|ts|tsx|css|scss|md|mdx|graphql)\" --write",
+        "start": "rm -rf .cache && cross-env NODE_ENV=development yarn run develop",
+        "serve": "gatsby serve",
+        "test": "cross-env NODE_ENV=test jest",
+        "ci-test": "cross-env NODE_ENV=test jest -u -w 2",
+        "test:watch": "cross-env NODE_ENV=test jest --watchAll",
+        "storybook": "start-storybook -p 6006",
+        "build-storybook": "build-storybook -o build-storybook"
   },
   "husky": {
     "hooks": {

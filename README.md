@@ -40,7 +40,7 @@ Kick off your project with this default boilerplate. This starter ships with the
 
     ```shell
     # clone this repo via github link
-    git clone https://github.com/Integrify-Finland/Measur.git
+    git clone https://github.com/tripheo0412/React-Gatsby-Contentful-Typescript-CircleCI-Netlify-Boilerplate.git
     ```
 
 2.  **Install all packages**
@@ -48,14 +48,14 @@ Kick off your project with this default boilerplate. This starter ships with the
     Using either yarn/npm install
 
     ```shell
-    cd Measur/
+    cd React-Gatsby-Typescript-CircleCI-Netlify-Boilerplate
     yarn
     ```
 
     or
 
     ```shell
-    cd Measur/
+    cd React-Gatsby-Typescript-CircleCI-Netlify-Boilerplate
     npm install
     ```
 
