@@ -4,10 +4,12 @@ set -eu
 
 token=${GITHUB_DEPLOYMENTS_TOKEN:?"Missing GITHUB_TOKEN environment variable"}
 
-if ! deployment_id=$(cat deployment); then
+if ! storybook_deployment_id=$(cat storybook_deployment); then
   echo "Deployment ID was not found" 1>&2
   exit 3
 fi
+
+
 
 if [ "$1" = "error" ]; then
   curl -s \
@@ -15,7 +17,7 @@ if [ "$1" = "error" ]; then
     -H "Authorization: bearer ${token}" \
     -d "{\"state\": \"error\", \"environment\": \"storybook\"" \
     -H "Content-Type: application/json" \
-    "https://api.github.com/repos/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}/deployments/${deployment_id}/statuses"
+    "https://api.github.com/repos/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}/deployments/${storybook_deployment_id}/statuses"
   exit 1
 fi
 
@@ -35,14 +37,16 @@ if ! repository_id=$(echo "${repository}" | python -c 'import sys, json; print j
 fi
 
 path_to_repo=$(echo "$CIRCLE_WORKING_DIRECTORY" | sed -e "s:~:$HOME:g")
-url="https://${CIRCLE_BUILD_NUM}-${repository_id}-gh.circle-artifacts.com/0${path_to_repo}/storybook-static/index.html"
+url="https://${CIRCLE_BUILD_NUM}-${repository_id}-gh.circle-artifacts.com/0${path_to_repo}/build-storybook/index.html"
 
-if ! deployment=$(curl -s \
+if ! storybook_deployment=$(curl -s \
                   -X POST \
                   -H "Authorization: bearer ${token}" \
-                  -d "{\"state\": \"success\", \"environment\": \"storybook\", \"environment_url\": \"${url}\", \"target_url\": \"${url}\", \"log_url\": \"${url}\"}" \
+                  -d "{\"state\": \"success\",\"description\": \"deployed on CircleCI\",  \"environment\": \"storybook\", \"environment_url\": \"${url}\", \"target_url\": \"${url}\", \"log_url\": \"${url}\"}" \
                   -H "Content-Type: application/json" \
-                  "https://api.github.com/repos/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}/deployments/${deployment_id}/statuses"); then
+                  "https://api.github.com/repos/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}/deployments/${storybook_deployment_id}/statuses"); then
   echo "POSTing deployment status failed, exiting (not failing build)" 1>&2
   exit 1
 fi
+
+

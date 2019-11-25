@@ -1,245 +1,245 @@
 @function tint($color, $percentage) {
-	@return mix(white, $color, $percentage);
+  @return mix(white, $color, $percentage);
 }
 
 @function shade($color, $percentage) {
-	@return mix(black, $color, $percentage);
+  @return mix(black, $color, $percentage);
 }
 
 @mixin interpolate(
-	$properties,
-	$min-screen,
-	$max-screen,
-	$min-value,
-	$max-value
+  $properties,
+  $min-screen,
+  $max-screen,
+  $min-value,
+  $max-value
 ) {
-	& {
-		@each $property in $properties {
-			#{$property}: $min-value;
-		}
+  & {
+    @each $property in $properties {
+      #{$property}: $min-value;
+    }
 
-		@media screen and (min-width: $min-screen) {
-			@each $property in $properties {
-				#{$property}: calc-interpolation(
-					$min-screen,
-					$min-value,
-					$max-screen,
-					$max-value
-				);
-			}
-		}
+    @media screen and (min-width: $min-screen) {
+      @each $property in $properties {
+        #{$property}: calc-interpolation(
+          $min-screen,
+          $min-value,
+          $max-screen,
+          $max-value
+        );
+      }
+    }
 
-		@media screen and (min-width: $max-screen) {
-			@each $property in $properties {
-				#{$property}: $max-value;
-			}
-		}
-	}
+    @media screen and (min-width: $max-screen) {
+      @each $property in $properties {
+        #{$property}: $max-value;
+      }
+    }
+  }
 }
 
 @function calc-interpolation($min-screen, $min-value, $max-screen, $max-value) {
-	$a: ($max-value - $min-value) / ($max-screen - $min-screen);
-	$b: $min-value - $a * $min-screen;
+  $a: ($max-value - $min-value) / ($max-screen - $min-screen);
+  $b: $min-value - $a * $min-screen;
 
-	$sign: '+';
-	@if ($b < 0) {
-		$sign: '-';
-		$b: abs($b);
-	}
-	@return calc(#{$a * 100}vw #{$sign} #{$b});
+  $sign: '+';
+  @if ($b < 0) {
+    $sign: '-';
+    $b: abs($b);
+  }
+  @return calc(#{$a * 100}vw #{$sign} #{$b});
 }
 
 @mixin size($min-width, $padding) {
-	min-width: $min-width;
-	padding: $padding;
+  min-width: $min-width;
+  padding: $padding;
 }
 
 @mixin color($background-color, $text-color) {
-	color: $text-color;
-	background-color: $background-color;
+  color: $text-color;
+  background-color: $background-color;
 
-	&:focus {
-		outline: none;
-	}
+  &:focus {
+    outline: none;
+  }
 }
 
 @mixin underline($font-color, $underline-color: $font-color) {
-	position: relative;
-	color: $font-color;
-	text-decoration: none;
+  position: relative;
+  color: $font-color;
+  text-decoration: none;
 
-	&::before {
-		content: '';
-		position: absolute;
-		width: 100%;
-		height: 2px;
-		bottom: 0;
-		left: 0;
-		background-color: $underline-color;
-		visibility: hidden;
-		-webkit-transform: scaleX(0);
-		transform: scaleX(0);
-		-webkit-transition: all 0.3s ease-in-out 0s;
-		transition: all 0.3s ease-in-out 0s;
-	}
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $underline-color;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
 
-	&:hover {
-		&::before {
-			visibility: visible;
-			-webkit-transform: scaleX(1);
-			transform: scaleX(1);
-		}
-	}
+  &:hover {
+    &::before {
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
 }
 @mixin timeline-line {
-	position: relative;
-	&::before {
-		content: '';
-		display: block;
-		position: absolute;
-		top: 0;
-		width: 10px;
-		height: 10px;
-		color: white;
-		background: $primary;
-		border-radius: 50%;
-		@content;
-	}
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    color: white;
+    background: $primary;
+    border-radius: 50%;
+    @content;
+  }
 }
 @mixin for-phone-only {
-	@media (max-width: 600px) {
-		@content;
-	}
+  @media (max-width: 600px) {
+    @content;
+  }
 }
 @mixin for-tablet-portrait-down {
-	@media (max-width: 900px) {
-		@content;
-	}
+  @media (max-width: 900px) {
+    @content;
+  }
 }
 @mixin for-tablet-landscape-down {
-	@media (max-width: 1200px) {
-		@content;
-	}
+  @media (max-width: 1200px) {
+    @content;
+  }
 }
 @mixin for-desktop-down {
-	@media (max-width: 1800px) {
-		@content;
-	}
+  @media (max-width: 1800px) {
+    @content;
+  }
 }
 @mixin for-big-desktop-only {
-	@media (min-width: 1801px) {
-		@content;
-	}
+  @media (min-width: 1801px) {
+    @content;
+  }
 }
 
 @mixin for-phone-small {
-	@media (max-width: 518px) {
-		@content;
-	}
+  @media (max-width: 518px) {
+    @content;
+  }
 }
 
 @mixin for-phone-small-landscape {
-	@media screen and (min-width: 320px) and (max-width: 568px) and (orientation: landscape) {
-		@content;
-	}
+  @media screen and (min-width: 320px) and (max-width: 568px) and (orientation: landscape) {
+    @content;
+  }
 }
 
 @mixin for-phone {
-	@media (max-width: 599px) {
-		@content;
-	}
+  @media (max-width: 599px) {
+    @content;
+  }
 }
 
 @mixin for-phone-landscape {
-	@media screen and (min-width: 375px) and (max-width: 667px) and (orientation: landscape) {
-		@content;
-	}
+  @media screen and (min-width: 375px) and (max-width: 667px) and (orientation: landscape) {
+    @content;
+  }
 }
 
 @mixin for-tablet-portrait-up {
-	@media (min-width: 600px) {
-		@content;
-	}
+  @media (min-width: 600px) {
+    @content;
+  }
 }
 @mixin for-tablet-portait {
-	@media (min-width: 600px) and (max-width: 899px) {
-		@content;
-	}
+  @media (min-width: 600px) and (max-width: 899px) {
+    @content;
+  }
 }
 @mixin for-tablet-landscape-up {
-	@media (min-width: 900px) {
-		@content;
-	}
+  @media (min-width: 900px) {
+    @content;
+  }
 }
 @mixin for-tablet-landscape {
-	@media (min-width: 900px) and (max-width: 1199px) {
-		@content;
-	}
+  @media (min-width: 900px) and (max-width: 1199px) {
+    @content;
+  }
 }
 @mixin for-ipad-pro {
-	@media (max-width: 1024px) {
-		@content;
-	}
+  @media (max-width: 1024px) {
+    @content;
+  }
 }
 @mixin for-desktop-up {
-	@media (min-width: 1200px) {
-		@content;
-	}
+  @media (min-width: 1200px) {
+    @content;
+  }
 }
 @mixin for-desktop {
-	@media (min-width: 1200px) and (max-width: 1799px) {
-		@content;
-	}
+  @media (min-width: 1200px) and (max-width: 1799px) {
+    @content;
+  }
 }
 @mixin for-big-desktop-up {
-	@media (min-width: 1800px) {
-		@content;
-	}
+  @media (min-width: 1800px) {
+    @content;
+  }
 }
 
 @mixin for-ipad-portrait-down {
-	@media (max-width: 900px) and (orientation: portrait) {
-		@content;
-	}
+  @media (max-width: 900px) and (orientation: portrait) {
+    @content;
+  }
 }
 @mixin for-ipad-pro-landscape {
-	@media (max-width: 1200px) and (orientation: landscape) {
-		@content;
-	}
+  @media (max-width: 1200px) and (orientation: landscape) {
+    @content;
+  }
 }
 
 @mixin for-ipad-landscape-down {
-	@media (max-width: 1024px) and (orientation: landscape) {
-		@content;
-	}
+  @media (max-width: 1024px) and (orientation: landscape) {
+    @content;
+  }
 }
 
 @mixin for-ipad-pro-big-portrait {
-	@media (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
-		@content;
-	}
+  @media (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+    @content;
+  }
 }
 
 @mixin for-ipad-pro-big-landscape {
-	@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
-		@content;
-	}
+  @media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+    @content;
+  }
 }
 
 @mixin for-phone-big-landscape {
-	@media (max-width: 900px) and (orientation: landscape) {
-		@content;
-	}
+  @media (max-width: 900px) and (orientation: landscape) {
+    @content;
+  }
 }
 
 @mixin for-phone-giant-landscape {
-	@media (max-width: 1000px) and (orientation: landscape) {
-		@content;
-	}
+  @media (max-width: 1000px) and (orientation: landscape) {
+    @content;
+  }
 }
 
 @mixin for-phone-portrait {
-	@media (max-width: 600px) and (orientation: portrait) {
-		@content;
-	}
+  @media (max-width: 600px) and (orientation: portrait) {
+    @content;
+  }
 }

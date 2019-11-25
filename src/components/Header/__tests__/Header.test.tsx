@@ -3,13 +3,13 @@ import Header from '../header'
 import { render } from '@testing-library/react'
 
 describe('<Header/>', () => {
-	it('should render Header with <TESTING> as title', () => {
-		// Arrange
-		const { getByText } = render(<Header siteTitle={'TESTING'} />)
+  it('should render Header with <TESTING> as title', () => {
+    // Arrange
+    const { getByText } = render(<Header siteTitle={'TESTING'} />)
 
-		// Act
+    // Act
 
-		// Assert
-		expect(getByText('TESTING')).toBeInTheDocument()
-	})
+    // Assert
+    expect(getByText('TESTING')).toBeInTheDocument()
+  })
 })
