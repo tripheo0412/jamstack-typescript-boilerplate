@@ -1,11 +1,14 @@
-[![Node Version](https://img.shields.io/badge/Node-10.16.0-339933.svg?style=flat&logo=Node.js)]()
-[![React Version](https://img.shields.io/badge/React-16.9.0-61DAFB.svg?style=flat&logo=React)]()
-[![Gatsby Version](https://img.shields.io/badge/Gatsby-2.15.22-663399.svg?style=flat&logo=Gatsby)]()
-[![Typescript Version](https://img.shields.io/badge/TypeScript-3.6.3-007ACC.svg?style=flat&logo=TypeScript)]()
+[![Node Version](https://img.shields.io/badge/Node->=10.16.0-339933.svg?style=flat&logo=Node.js)]()
+[![React Version](https://img.shields.io/badge/React-16.12.0-61DAFB.svg?style=flat&logo=React)]()
+[![Gatsby Version](https://img.shields.io/badge/Gatsby-2.19.17-663399.svg?style=flat&logo=Gatsby)]()
+[![Typescript Version](https://img.shields.io/badge/TypeScript-3.7.5-007ACC.svg?style=flat&logo=TypeScript)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat&logo=Read-The-Docs)](https://opensource.org/licenses/MIT)<br/>
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d967cec0-f7ca-4823-9eba-d4de717fe1e4/deploy-status)](https://app.netlify.com/sites/jamstack-boilerpalte/deploys)
-[Master Branch Live Preview](https://jamstack-boilerpalte.netlify.com/)<br/>
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/432f3857-b88f-4eb6-b170-d6fe149025e5/deploy-status)](https://app.netlify.com/sites/jamstack-boilerplate/deploys)
+[Master Branch Live Preview](https://jamstack-boilerplate.netlify.com/)<br/>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4444d28a-09bc-4b76-8875-94811b5da7e8/deploy-status)](https://app.netlify.com/sites/jamstack-boilerplate-develop/deploys)
+[Develop Branch Live Preview](https://jamstack-boilerplate-develop.netlify.com/)<br/>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/643685b2-875a-4f44-a9c1-f8fefd176742/deploy-status)](https://app.netlify.com/sites/jamstack-boilerplate-storybook/deploys)
+[Storybook Documentation](https://jamstack-boilerplate-storybook.netlify.com/)<br/>
 [![CircleCI](https://circleci.com/gh/tripheo0412/React-Gatsby-Contentful-Typescript-CircleCI-Netlify-Boilerplate/tree/master.svg?style=svg)](https://circleci.com/gh/tripheo0412/React-Gatsby-Contentful-Typescript-CircleCI-Netlify-Boilerplate/tree/master) [Test status](https://circleci.com/gh/tripheo0412/React-Gatsby-Contentful-Typescript-CircleCI-Netlify-Boilerplate)<br/>
 
 <p align="center">
@@ -29,7 +32,7 @@
   </a>
 </p>
 <h1 align="center">
-  React-Typescript-Gatsby-Contentful-Storybook-CircleCI-Netlify Boilerplate
+  JAMStack Boilerplate
 </h1>
 
 Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files the blazing fast app generator for React. Integrating with Typescript for type checking as well as Jest for unit testing. Provide smooth development experience and CI/CD pipeline with CircleCI and Netlify built in.
