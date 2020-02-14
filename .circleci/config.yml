@@ -77,14 +77,14 @@ jobs:
           command: ./tasks/deployment/storybook-deploy-start.sh > storybook_deployment
       - restore_cache:
           keys:
-            - v9-storybook-public-cache-{{ .Branch }}
+            - v11-storybook-public-cache-{{ .Branch }}
       - run:
           name: Storybook Build
           command: yarn build-storybook
       - store_artifacts:
           path: build-storybook
       - save_cache:
-          key: v9-storybook-public-cache-{{ .Branch }}
+          key: v11-storybook-public-cache-{{ .Branch }}
           paths:
             - ./build-storybook
       - run:
@@ -127,17 +127,14 @@ jobs:
       - run:
           name: Install JQ
           command: sudo apt-get install jq
-      - run:
-          name: Create GitHub Storybook Deployment
-          command: ./tasks/deployment/storybook-deploy-start.sh > storybook_deployment
       - restore_cache:
           keys:
-            - v9-storybook-public-cache-{{ .Branch }}
+            - v11-storybook-public-cache-{{ .Branch }}
       - run:
           name: Storybook Build
           command: yarn build-storybook
       - save_cache:
-          key: v9-storybook-public-cache-{{ .Branch }}
+          key: v11-storybook-public-cache-{{ .Branch }}
           paths:
             - ./build-storybook
       - run:

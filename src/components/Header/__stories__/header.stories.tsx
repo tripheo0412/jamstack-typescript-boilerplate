@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../header'
+import Header from '..'
 
 import { storiesOf } from '@storybook/react'
 
