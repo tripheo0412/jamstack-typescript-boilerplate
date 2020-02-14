@@ -1,9 +1,8 @@
 {
   "name": "jamstack-boilerplate",
   "license": "MIT",
-  "private": true,
   "description": "React-Gatsby-Typescript-CircleCI-Netlify-Boilerplate",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Tri Hoang <tripheo0412@gmail.com>",
   "dependencies": {
     "axios": "^0.19.0",
@@ -77,7 +76,12 @@
     "react",
     "typescript",
     "frontend",
-    "javascript"
+    "javascript",
+    "jamstack",
+    "contentful",
+    "netlify",
+    "boilerplate",
+    "circleci"
   ],
   "scripts": {
     "build": "gatsby build",
