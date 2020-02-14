@@ -27,11 +27,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-sass`,
-      options: {
-        data:
-          '@import "_variables.scss";@import "_mixins.scss";@import "_layout.scss";',
-        includePaths: ['src/assets/styles'],
-      },
     },
     `gatsby-plugin-sharp`,
     {

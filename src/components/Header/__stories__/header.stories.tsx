@@ -9,4 +9,4 @@ storiesOf('Header', module)
       inline: true,
     },
   })
-  .add('default', () => <Header siteTitle="sadad" />)
+  .add('default', () => <Header siteTitle="JAMStack Boilerplate Header" />)
