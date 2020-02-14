@@ -1,20 +1,13 @@
 require('dotenv').config()
 module.exports = {
   siteMetadata: {
-    title: `React-Gatsby-Typescript-CircleCI-Netlify-Boilerplate`,
+    title: `jamstack-boilerplate`,
     description: `React-Gatsby-Typescript-CircleCI-Netlify-Boilerplate`,
-    author: `@gatsbyjs`,
+    author: `@tripheo0412`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
-    {
-      resolve: 'gatsby-plugin-tslint',
-      options: {
-        test: /\.ts$|\.tsx$/,
-        exclude: /(node_modules|cache|public)/,
-      },
-    },
     /***** REMOVE COMMENT TO ENABLE CONTENTFUL CMS
 		{
 			resolve: `gatsby-source-contentful`,
@@ -44,8 +37,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `jamstack-boilerplate`,
+        short_name: `jamstack`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

@@ -12,9 +12,10 @@ export type btnType =
 
 interface ButtonProps {
   /** button type */
-  type: btnType
+  type?: btnType
   /** text type */
   text: string
+  /** button handler */
   onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }
 

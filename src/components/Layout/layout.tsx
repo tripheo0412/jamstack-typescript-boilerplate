@@ -11,11 +11,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Header from '../Header/header'
 import './layout.css'
 
-interface Props {
-  children?: any
-}
-
-const Layout = ({ children }: Props) => {
+const Layout: React.FC = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
