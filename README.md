@@ -43,7 +43,7 @@ Kick off your project with this default boilerplate. This starter ships with the
 
     ```shell
     # clone this repo via github link
-    git clone https://github.com/tripheo0412/React-Gatsby-Contentful-Typescript-CircleCI-Netlify-Boilerplate.git
+    git clone https://github.com/tripheo0412/jamstack-typescript-boilerplate.git
     ```
 
 2.  **Install all packages**
@@ -51,14 +51,14 @@ Kick off your project with this default boilerplate. This starter ships with the
     Using either yarn/npm install
 
     ```shell
-    cd React-Gatsby-Typescript-CircleCI-Netlify-Boilerplate
+    cd jamstack-typescript-boilerplate
     yarn
     ```
 
     or
 
     ```shell
-    cd React-Gatsby-Typescript-CircleCI-Netlify-Boilerplate
+    cd jamstack-typescript-boilerplate
     npm install
     ```
 
@@ -127,7 +127,7 @@ Kick off your project with this default boilerplate. This starter ships with the
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-    Open the `React-Gatsby-Typescript-CircleCI-Netlify-Boilerplate` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+    Open the `jamstack-typescript-boilerplate` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
 ## 🧐 What's inside?
 
