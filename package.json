@@ -1,7 +1,7 @@
 {
-  "name": "jamstack-boilerplate",
+  "name": "jamstack-typescript-boilerplate",
   "license": "MIT",
-  "description": "React-Gatsby-Typescript-CircleCI-Netlify-Boilerplate",
+  "description": "jamstack-typescript-boilerplate",
   "version": "1.0.0",
   "author": "Tri Hoang <tripheo0412@gmail.com>",
   "dependencies": {
