@@ -113,9 +113,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tripheo0412/React-Gatsby-Typescript-CircleCI-Netlify-Boilerplate"
+    "url": "https://github.com/tripheo0412/jamstack-typescript-boilerplate"
   },
   "bugs": {
-    "url": "https://github.com/tripheo0412/React-Gatsby-Typescript-CircleCI-Netlify-Boilerplate/issues/"
+    "url": "https://github.com/tripheo0412/jamstack-typescript-boilerplate/issues/"
   }
 }

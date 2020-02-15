@@ -8,7 +8,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import Header from '../Header'
+import Header from '../header'
 import './styles.css'
 
 const Layout: React.FC = ({ children }) => {
