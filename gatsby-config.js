@@ -28,6 +28,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sass`,
     },
+    {
+      resolve: `gatsby-plugin-less`,
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
