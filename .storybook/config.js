@@ -4,7 +4,6 @@ import { withA11y } from '@storybook/addon-a11y'
 import { withKnobs } from '@storybook/addon-knobs'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 addDecorator(withInfo)
-
 addDecorator(withA11y)
 addDecorator(withKnobs)
 addParameters({

@@ -14,7 +14,7 @@ module.exports = {
     },
   },
   rules: {
-    // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
+    'react/prop-types': 'off', // Disable prop-types as we use TypeScript for type checking
     '@typescript-eslint/explicit-function-return-type': 'off',
   },
   settings: {
@@ -27,7 +27,12 @@ module.exports = {
       files: ['*.ts', '*.tsx', '*.js', '*.jsx'],
       rules: {
         '@typescript-eslint/camelcase': 'off',
-        'react/prop-types': 'off',
+      },
+    },
+    {
+      files: ['*.js'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off', //
       },
     },
   ],
