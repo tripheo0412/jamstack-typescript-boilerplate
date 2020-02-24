@@ -64,7 +64,7 @@ jobs:
             - gatsby-public-cache-{{ .Branch }}
       - run:
           name: Gatsby Build
-          command: GATSBY_CPU_COUNT=2 yarn build-development
+          command: GATSBY_CPU_COUNT=2 yarn build-preview
       - save_cache:
           key: gatsby-public-cache-{{ .Branch }}
           paths:
@@ -164,7 +164,7 @@ jobs:
             - gatsby-public-cache-{{ .Branch }}
       - run:
           name: Gatsby Build
-          command: GATSBY_CPU_COUNT=2 yarn build-development
+          command: GATSBY_CPU_COUNT=2 yarn build-preview
       - run:
           name: Add GitHub Gatsby Deployment success status
           command: ./tasks/deployment/gatsby-deploy-end.sh success
