@@ -1,9 +1,10 @@
 require('dotenv').config()
 module.exports = {
   siteMetadata: {
-    title: `jamstack-boilerplate`,
-    description: `React-Gatsby-Typescript-CircleCI-Netlify-Boilerplate`,
+    title: `jamstack-typescript-boilerplate`,
+    description: `jamstack-typescript-boilerplate`,
     author: `@tripheo0412`,
+    type: process.env.GATSBY_ACTIVE_ENV,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -25,14 +26,13 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-plugin-sass`,
-    },
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-less`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `jamstack-boilerplate`,
+        name: `jamstack-typescript-boilerplate`,
         short_name: `jamstack`,
         start_url: `/`,
         background_color: `#663399`,

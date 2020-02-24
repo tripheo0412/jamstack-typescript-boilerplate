@@ -2,14 +2,15 @@
 [![React Version](https://img.shields.io/badge/React-16.12.0-61DAFB.svg?style=flat&logo=React)]()
 [![Gatsby Version](https://img.shields.io/badge/Gatsby-2.19.17-663399.svg?style=flat&logo=Gatsby)]()
 [![Typescript Version](https://img.shields.io/badge/TypeScript-3.7.5-007ACC.svg?style=flat&logo=TypeScript)]()
+[![Greenkeeper badge](https://badges.greenkeeper.io/tripheo0412/jamstack-typescript-boilerplate.svg)](https://greenkeeper.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat&logo=Read-The-Docs)](https://opensource.org/licenses/MIT)<br/>
-[![Netlify Status](https://api.netlify.com/api/v1/badges/432f3857-b88f-4eb6-b170-d6fe149025e5/deploy-status)](https://app.netlify.com/sites/jamstack-boilerplate/deploys)
-[Master Branch Live Preview](https://jamstack-boilerplate.netlify.com/)<br/>
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4444d28a-09bc-4b76-8875-94811b5da7e8/deploy-status)](https://app.netlify.com/sites/jamstack-boilerplate-develop/deploys)
-[Develop Branch Live Preview](https://jamstack-boilerplate-develop.netlify.com/)<br/>
-[![Netlify Status](https://api.netlify.com/api/v1/badges/643685b2-875a-4f44-a9c1-f8fefd176742/deploy-status)](https://app.netlify.com/sites/jamstack-boilerplate-storybook/deploys)
-[Storybook Documentation](https://jamstack-boilerplate-storybook.netlify.com/)<br/>
-[![CircleCI](https://circleci.com/gh/tripheo0412/React-Gatsby-Contentful-Typescript-CircleCI-Netlify-Boilerplate/tree/master.svg?style=svg)](https://circleci.com/gh/tripheo0412/React-Gatsby-Contentful-Typescript-CircleCI-Netlify-Boilerplate/tree/master) [Test status](https://circleci.com/gh/tripheo0412/React-Gatsby-Contentful-Typescript-CircleCI-Netlify-Boilerplate)<br/>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/432f3857-b88f-4eb6-b170-d6fe149025e5/deploy-status)](https://app.netlify.com/sites/jamstack-typescript/deploys)
+[Master Branch Live Preview](https://jamstack-typescript.netlify.com/)<br/>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4444d28a-09bc-4b76-8875-94811b5da7e8/deploy-status)](https://app.netlify.com/sites/jamstack-typescript-develop/deploys)
+[Develop Branch Live Preview](https://jamstack-typescript-develop.netlify.com/)<br/>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/643685b2-875a-4f44-a9c1-f8fefd176742/deploy-status)](https://app.netlify.com/sites/jamstack-typescript-storybook/deploys)
+[Storybook Documentation](https://jamstack-typescript-storybook.netlify.com/)<br/>
+[![CircleCI](https://circleci.com/gh/tripheo0412/jamstack-typescript-boilerplate/tree/master.svg?style=svg)](https://circleci.com/gh/tripheo0412/jamstack-typescript-boilerplate/tree/master) [Test status](https://circleci.com/gh/tripheo0412/jamstack-typescript-boilerplate)<br/>
 
 <p align="center">
   <a href="https://reactjs.org/">
@@ -43,7 +44,7 @@ Kick off your project with this default boilerplate. This starter ships with the
 
     ```shell
     # clone this repo via github link
-    git clone https://github.com/tripheo0412/React-Gatsby-Contentful-Typescript-CircleCI-Netlify-Boilerplate.git
+    git clone https://github.com/tripheo0412/jamstack-typescript-boilerplate.git
     ```
 
 2.  **Install all packages**
@@ -51,14 +52,14 @@ Kick off your project with this default boilerplate. This starter ships with the
     Using either yarn/npm install
 
     ```shell
-    cd React-Gatsby-Typescript-CircleCI-Netlify-Boilerplate
+    cd jamstack-typescript-boilerplate
     yarn
     ```
 
     or
 
     ```shell
-    cd React-Gatsby-Typescript-CircleCI-Netlify-Boilerplate
+    cd jamstack-typescript-boilerplate
     npm install
     ```
 
@@ -127,7 +128,7 @@ Kick off your project with this default boilerplate. This starter ships with the
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-    Open the `React-Gatsby-Typescript-CircleCI-Netlify-Boilerplate` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+    Open the `jamstack-typescript-boilerplate` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
 ## 🧐 What's inside?
 
