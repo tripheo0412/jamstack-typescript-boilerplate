@@ -1,18 +1,13 @@
 import { Link } from 'gatsby'
 import React, { FC } from 'react'
-
+import './styles.less'
 interface HeaderProps {
   /** siteTitle prop type */
   siteTitle: string
 }
 
 const Header: FC<HeaderProps> = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
+  <header className={'header'}>
     <div
       style={{
         margin: `0 auto`,
