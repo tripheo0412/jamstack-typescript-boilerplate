@@ -1,5 +1,4 @@
 require('dotenv').config()
-console.log(process.env.GATSBY_ACTIVE_ENV)
 module.exports = {
   siteMetadata: {
     title: `jamstack-typescript-boilerplate`,
