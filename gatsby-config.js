@@ -4,7 +4,6 @@ module.exports = {
     title: `jamstack-typescript-boilerplate`,
     description: `jamstack-typescript-boilerplate`,
     author: `@tripheo0412`,
-    image: `./src/images/gatsby-icon.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

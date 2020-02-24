@@ -25,7 +25,6 @@ function SEO({ description, lang, meta, title }: Props) {
             title
             description
             author
-            image
           }
         }
       }
@@ -58,11 +57,11 @@ function SEO({ description, lang, meta, title }: Props) {
           property: `og:type`,
           content: `website`,
         },
-        {
-          name: `og:image`,
-          property: `og:image`,
-          content: site.siteMetadata.image,
-        },
+        // {
+        //   name: `og:image`,
+        //   property: `og:image`,
+        //   content: site.siteMetadata.image,
+        // },
         {
           property: `og:image:width`,
           content: `1280`,
