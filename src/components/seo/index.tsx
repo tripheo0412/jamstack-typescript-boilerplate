@@ -25,6 +25,7 @@ function SEO({ description, lang, meta, title }: Props) {
             title
             description
             author
+            image
           }
         }
       }
@@ -32,7 +33,7 @@ function SEO({ description, lang, meta, title }: Props) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-
+  const shouldIndex = process.env.NODE_ENV === 'production'
   return (
     <Helmet
       htmlAttributes={{
@@ -58,6 +59,19 @@ function SEO({ description, lang, meta, title }: Props) {
           content: `website`,
         },
         {
+          name: `og:image`,
+          property: `og:image`,
+          content: site.siteMetadata.image,
+        },
+        {
+          property: `og:image:width`,
+          content: `1280`,
+        },
+        {
+          property: `og:image:height`,
+          content: `720`,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
@@ -74,7 +88,9 @@ function SEO({ description, lang, meta, title }: Props) {
           content: metaDescription,
         },
       ].concat(meta || [])}
-    />
+    >
+      {!shouldIndex && <meta name="robots" content="noindex" />}
+    </Helmet>
   )
 }
 
