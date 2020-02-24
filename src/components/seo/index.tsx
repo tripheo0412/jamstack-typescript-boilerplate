@@ -25,6 +25,7 @@ function SEO({ description, lang, meta, title }: Props) {
             title
             description
             author
+            type
           }
         }
       }
@@ -32,9 +33,7 @@ function SEO({ description, lang, meta, title }: Props) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const shouldIndex = process.env.INDEX === 'true'
-  console.log('=========================')
-  console.log(process.env.INDEX)
+  const shouldIndex = site.siteMetadata.type === 'production'
   return (
     <Helmet
       htmlAttributes={{
@@ -90,7 +89,7 @@ function SEO({ description, lang, meta, title }: Props) {
         },
       ].concat(meta || [])}
     >
-      {shouldIndex && <meta name="robots" content="noindex" />}
+      {!shouldIndex && <meta name="robots" content="noindex" />}
     </Helmet>
   )
 }

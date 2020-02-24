@@ -1,9 +1,11 @@
 require('dotenv').config()
+console.log(process.env.GATSBY_ACTIVE_ENV)
 module.exports = {
   siteMetadata: {
     title: `jamstack-typescript-boilerplate`,
     description: `jamstack-typescript-boilerplate`,
     author: `@tripheo0412`,
+    type: process.env.GATSBY_ACTIVE_ENV,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
