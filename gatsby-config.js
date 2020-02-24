@@ -25,18 +25,8 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        // Override the file regex for SASS
-        sassRuleTest: /\.global\.s(a|c)ss$/,
-        // Override the file regex for CSS modules
-        sassRuleModulesTest: /\.mod\.s(a|c)ss$/,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-less`,
-    },
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-less`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
