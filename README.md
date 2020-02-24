@@ -1,16 +1,15 @@
 [![Node Version](https://img.shields.io/badge/Node->=10.16.0-339933.svg?style=flat&logo=Node.js)]()
-[![Known Vulnerabilities](https://snyk.io/test/github/tripheo0412/jamstack-typescript-boilerplate/badge.svg)](https://snyk.io/test/github/tripheo0412/jamstack-typescript-boilerplate/)
 [![React Version](https://img.shields.io/badge/React-16.12.0-61DAFB.svg?style=flat&logo=React)]()
 [![Gatsby Version](https://img.shields.io/badge/Gatsby-2.19.17-663399.svg?style=flat&logo=Gatsby)]()
 [![Typescript Version](https://img.shields.io/badge/TypeScript-3.7.5-007ACC.svg?style=flat&logo=TypeScript)]()
 [![Greenkeeper badge](https://badges.greenkeeper.io/tripheo0412/jamstack-typescript-boilerplate.svg)](https://greenkeeper.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat&logo=Read-The-Docs)](https://opensource.org/licenses/MIT)<br/>
-[![Netlify Status](https://api.netlify.com/api/v1/badges/432f3857-b88f-4eb6-b170-d6fe149025e5/deploy-status)](https://app.netlify.com/sites/jamstack-typescript-boilerplate/deploys)
-[Master Branch Live Preview](https://jamstack-typescript-boilerplate.netlify.com/)<br/>
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4444d28a-09bc-4b76-8875-94811b5da7e8/deploy-status)](https://app.netlify.com/sites/jamstack-typescript-boilerplate-develop/deploys)
-[Develop Branch Live Preview](https://jamstack-typescript-boilerplate-develop.netlify.com/)<br/>
-[![Netlify Status](https://api.netlify.com/api/v1/badges/643685b2-875a-4f44-a9c1-f8fefd176742/deploy-status)](https://app.netlify.com/sites/jamstack-typescript-boilerplate-storybook/deploys)
-[Storybook Documentation](https://jamstack-typescript-boilerplate-storybook.netlify.com/)<br/>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/432f3857-b88f-4eb6-b170-d6fe149025e5/deploy-status)](https://app.netlify.com/sites/jamstack-typescript/deploys)
+[Master Branch Live Preview](https://jamstack-typescript.netlify.com/)<br/>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4444d28a-09bc-4b76-8875-94811b5da7e8/deploy-status)](https://app.netlify.com/sites/jamstack-typescript-develop/deploys)
+[Develop Branch Live Preview](https://jamstack-typescript-develop.netlify.com/)<br/>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/643685b2-875a-4f44-a9c1-f8fefd176742/deploy-status)](https://app.netlify.com/sites/jamstack-typescript-storybook/deploys)
+[Storybook Documentation](https://jamstack-typescript-storybook.netlify.com/)<br/>
 [![CircleCI](https://circleci.com/gh/tripheo0412/jamstack-typescript-boilerplate/tree/master.svg?style=svg)](https://circleci.com/gh/tripheo0412/jamstack-typescript-boilerplate/tree/master) [Test status](https://circleci.com/gh/tripheo0412/jamstack-typescript-boilerplate)<br/>
 
 <p align="center">
