@@ -1,5 +1,4 @@
 [![Node Version](https://img.shields.io/badge/Node->=10.16.0-339933.svg?style=flat&logo=Node.js)]()
-[![Known Vulnerabilities](https://snyk.io/test/github/tripheo0412/jamstack-typescript-boilerplate/badge.svg)](https://snyk.io/test/github/tripheo0412/jamstack-typescript-boilerplate/)
 [![React Version](https://img.shields.io/badge/React-16.12.0-61DAFB.svg?style=flat&logo=React)]()
 [![Gatsby Version](https://img.shields.io/badge/Gatsby-2.19.17-663399.svg?style=flat&logo=Gatsby)]()
 [![Typescript Version](https://img.shields.io/badge/TypeScript-3.7.5-007ACC.svg?style=flat&logo=TypeScript)]()
