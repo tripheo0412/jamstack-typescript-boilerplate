@@ -33,6 +33,8 @@ function SEO({ description, lang, meta, title }: Props) {
 
   const metaDescription = description || site.siteMetadata.description
   const shouldIndex = process.env.INDEX === 'true'
+  console.log('=========================')
+  console.log(process.env.INDEX)
   return (
     <Helmet
       htmlAttributes={{
