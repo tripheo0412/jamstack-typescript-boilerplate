@@ -86,8 +86,8 @@
     "circleci"
   ],
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "build": "cross-env NODE_ENV=production gatsby build",
+    "develop": "cross-env NODE_ENV=development gatsby develop",
     "lint": "eslint . --ext=.ts,.tsx,.js,.jsx",
     "lint:fix": "eslint . --ext=.ts,.tsx,.js,.jsx",
     "clear-cache": "rm -r .cache",
