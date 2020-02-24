@@ -25,7 +25,7 @@ module.exports = ({ config }) => {
   config.resolve.mainFields = ['browser', 'module', 'main']
 
   config.module.rules.push({
-    test: /\.s[ac]ss$/,
+    test: /\.s(a|c)ss$/,
     use: ['style-loader', 'css-loader', 'sass-loader'],
     include: path.resolve(__dirname, '../'),
   })
