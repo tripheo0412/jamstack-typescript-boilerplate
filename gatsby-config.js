@@ -4,7 +4,7 @@ module.exports = {
     title: `jamstack-typescript-boilerplate`,
     description: `jamstack-typescript-boilerplate`,
     author: `@tripheo0412`,
-    type: process.env.GATSBY_ACTIVE_ENV,
+    type: process.env.GATSBY_ACTIVE_ENV || 'staging',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

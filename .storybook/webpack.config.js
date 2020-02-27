@@ -25,11 +25,15 @@ module.exports = ({ config }) => {
   config.resolve.mainFields = ['browser', 'module', 'main']
 
   config.module.rules.push({
-    test: /\.scss$/,
+    test: /\.s(a|c)ss$/,
     use: ['style-loader', 'css-loader', 'sass-loader'],
     include: path.resolve(__dirname, '../'),
   })
-
+  config.module.rules.push({
+    test: /\.less$/,
+    use: ['style-loader', 'css-loader', 'less-loader'],
+    include: path.resolve(__dirname, '../'),
+  })
   config.module.rules.push({
     test: /\.(ts|tsx)$/,
     use: [

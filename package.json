@@ -100,18 +100,6 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o build-storybook"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged & yarn types-check & yarn test"
-    }
-  },
-  "lint-staged": {
-    "src/*.{ts, tsx}": "yarn lint",
-    "**/*.+(js|jsx|json|ts|tsx|css|scss|md|mdx|graphql)": [
-      "yarn format",
-      "git add"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/tripheo0412/jamstack-typescript-boilerplate"
