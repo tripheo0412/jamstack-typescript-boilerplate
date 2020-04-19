@@ -10,6 +10,7 @@
     "gatsby": "^2.19.18",
     "gatsby-image": "^2.2.41",
     "gatsby-plugin-canonical-urls": "^2.2.3",
+    "gatsby-plugin-i18n": "^1.0.1",
     "gatsby-plugin-manifest": "^2.2.41",
     "gatsby-plugin-offline": "^3.1.4",
     "gatsby-plugin-react-helmet": "^3.1.22",

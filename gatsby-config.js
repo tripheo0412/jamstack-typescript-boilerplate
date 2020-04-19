@@ -34,6 +34,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-i18n',
+      options: {
+        langKeyDefault: 'en',
+        useLangKeyLayout: false,
+        prefixDefault: false,
+      },
+    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-less`,
     {
