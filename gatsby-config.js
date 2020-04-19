@@ -26,7 +26,6 @@ module.exports = {
         siteUrl: `https://www.your-app-domain.netlify.app/`,
       },
     },
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
