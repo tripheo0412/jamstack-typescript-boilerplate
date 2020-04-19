@@ -1,23 +1,45 @@
 version: 2.1
+orbs:
+  jq: circleci/jq@2.0.1
 parameters:
   # This parameter is used to trigger the main workflow
   trigger:
     type: boolean
     default: true
-  contentful-develop:
+  cms-develop:
     type: boolean
     default: false
-  contentful-master:
+  cms-master:
     type: boolean
     default: false
 
 executors:
   node-executor:
     docker:
-      - image: circleci/node:10.16.0
+      - image: circleci/node:lts-browsers
     working_directory: ~/repo
 
 jobs:
+  checking-performance:
+    executor: node-executor
+    steps:
+      - checkout
+      - jq/install
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          name: Install Moreutils
+          command: sudo apt-get install moreutils
+      - run:
+          name: Test Script
+          command: ./tasks/lighthouse/detect-pages.sh
+      - run:
+          name: Lighthouse Auditing
+          command: yarn lhci:run
+      - run:
+          name: Lighthouse Report To Github
+          command: yarn lhci:upload
+
   install-dependencies-test-lint:
     executor: node-executor
     steps:
@@ -26,7 +48,7 @@ jobs:
           at: ~/repo
       - restore_cache:
           keys:
-            - yarn-cache-{{ checksum "yarn.lock" }}
+            - yarn-cache-11-{{ checksum "yarn.lock" }}
       - run:
           name: Install Dependencies
           command: yarn install && npm rebuild
@@ -40,22 +62,20 @@ jobs:
           name: Testing
           command: yarn ci-test
       - save_cache:
-          key: yarn-cache-{{ checksum "yarn.lock" }}
+          key: yarn-cache-11-{{ checksum "yarn.lock" }}
           paths:
             - ./node_modules
       - persist_to_workspace:
           root: .
           paths:
             - ./node_modules
-  gatsby-storybook-build-preview-deploy:
+  gatsby-build-preview-deploy:
     executor: node-executor
     steps:
       - checkout
+      - jq/install
       - attach_workspace:
           at: ~/repo
-      - run:
-          name: Install JQ
-          command: sudo apt-get install jq
       - run:
           name: Create GitHub Gatsby Deployment
           command: ./tasks/deployment/gatsby-deploy-start.sh > gatsby_deployment
@@ -77,6 +97,17 @@ jobs:
           name: Add GitHub Gatsby Deployment error status
           command: ./tasks/deployment/gatsby-deploy-end.sh error
           when: on_fail
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ./public
+  storybook-build-preview-deploy:
+    executor: node-executor
+    steps:
+      - checkout
+      - jq/install
+      - attach_workspace:
+          at: ~/repo
       - run:
           name: Create GitHub Storybook Deployment
           command: ./tasks/deployment/storybook-deploy-start.sh > storybook_deployment
@@ -100,10 +131,11 @@ jobs:
           name: Add GitHub Storybook Deployment error status
           command: ./tasks/deployment/storybook-deploy-end.sh error
           when: on_fail
-  contentful-gatsby-build-staging-deploy:
+  cms-gatsby-build-staging-deploy:
     executor: node-executor
     steps:
       - checkout
+      - jq/install
       - restore_cache:
           keys:
             - yarn-cache-{{ checksum "yarn.lock" }}
@@ -120,9 +152,6 @@ jobs:
           key: yarn-cache-{{ checksum "yarn.lock" }}
           paths:
             - ./node_modules
-      - run:
-          name: Install JQ
-          command: sudo apt-get install jq
       - run:
           name: Create GitHub Gatsby Deployment
           command: ./tasks/deployment/gatsby-deploy-start.sh > gatsby_deployment
@@ -151,11 +180,9 @@ jobs:
     executor: node-executor
     steps:
       - checkout
+      - jq/install
       - attach_workspace:
           at: ~/repo
-      - run:
-          name: Install JQ
-          command: sudo apt-get install jq
       - run:
           name: Create GitHub Gatsby Deployment
           command: ./tasks/deployment/gatsby-deploy-start.sh > gatsby_deployment
@@ -194,10 +221,11 @@ jobs:
           name: Netlify Deploy Storybook
           command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID_STORYBOOK --auth $NETLIFY_ACCESS_TOKEN --prod --dir=build-storybook
 
-  contentful-gatsby-build-release-deploy:
+  cms-gatsby-build-release-deploy:
     executor: node-executor
     steps:
       - checkout
+      - jq/install
       - restore_cache:
           keys:
             - yarn-cache-{{ checksum "yarn.lock" }}
@@ -214,9 +242,6 @@ jobs:
           key: yarn-cache-{{ checksum "yarn.lock" }}
           paths:
             - ./node_modules
-      - run:
-          name: Install JQ
-          command: sudo apt-get install jq
       - restore_cache:
           keys:
             - gatsby-public-cache-{{ .Branch }}
@@ -235,11 +260,9 @@ jobs:
     executor: node-executor
     steps:
       - checkout
+      - jq/install
       - attach_workspace:
           at: ~/repo
-      - run:
-          name: Install JQ
-          command: sudo apt-get install jq
       - restore_cache:
           keys:
             - gatsby-public-cache-{{ .Branch }}
@@ -260,7 +283,15 @@ workflows:
     when: << pipeline.parameters.trigger >>
     jobs:
       - install-dependencies-test-lint
-      - gatsby-storybook-build-preview-deploy:
+      - gatsby-build-preview-deploy:
+          requires:
+            - install-dependencies-test-lint
+          filters:
+            branches:
+              ignore:
+                - develop
+                - master
+      - storybook-build-preview-deploy:
           requires:
             - install-dependencies-test-lint
           filters:
@@ -282,12 +313,20 @@ workflows:
             branches:
               only:
                 - master
+      - checking-performance:
+          requires:
+            - gatsby-build-preview-deploy
+          filters:
+            branches:
+              ignore:
+                - develop
+                - master
 
-  contentful-webhook-develop:
-    when: << pipeline.parameters.contentful-develop >>
+  cms-webhook-develop:
+    when: << pipeline.parameters.cms-develop >>
     jobs:
-      - contentful-gatsby-build-staging-deploy
-  contentful-webhook-master:
-    when: << pipeline.parameters.contentful-master >>
+      - cms-gatsby-build-staging-deploy
+  cms-webhook-master:
+    when: << pipeline.parameters.cms-master >>
     jobs:
-      - contentful-gatsby-build-release-deploy
+      - cms-gatsby-build-release-deploy

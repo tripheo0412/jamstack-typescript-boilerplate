@@ -1,7 +1,4 @@
 {
   "src/*.{ts, tsx}": "yarn lint",
-  "**/*.+(js|jsx|json|ts|tsx|css|scss|md|mdx|graphql)": [
-    "yarn format",
-    "git add"
-  ]
+  "**/*.+(js|jsx|json|ts|tsx|css|scss|md|mdx|graphql)": ["yarn format"]
 }
