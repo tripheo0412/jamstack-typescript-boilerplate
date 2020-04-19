@@ -31,7 +31,7 @@ jobs:
           name: Install Moreutils
           command: sudo apt-get install moreutils
       - run:
-          name: Test Script
+          name: Detecting all pages
           command: ./tasks/lighthouse/detect-pages.sh
       - run:
           name: Lighthouse Auditing
