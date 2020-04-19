@@ -101,7 +101,9 @@
     "ci-test": "cross-env NODE_ENV=test jest -u -w 2",
     "test:watch": "cross-env NODE_ENV=test jest --watchAll",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o build-storybook"
+    "build-storybook": "build-storybook -o build-storybook",
+    "lhci:run": "lhci autorun",
+    "lhci:upload": "lhci upload"
   },
   "repository": {
     "type": "git",
