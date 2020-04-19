@@ -10,8 +10,8 @@ import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
 interface Props {
-  description?: string
-  lang?: string
+  description: string
+  lang: string
   meta?: []
   title: string
 }
