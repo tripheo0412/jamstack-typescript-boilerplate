@@ -7,7 +7,7 @@ import SEO from '../components/seo'
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="kotisivu" />
+    <SEO title="kotisivu" lang="fi" description="kotisivu" />
     <h1>Hei ihmiset</h1>
     <p>Tervetuloa uudelle Gatsby-sivustollesi.</p>
     <p>Nyt rakenna jotain hienoa.</p>
